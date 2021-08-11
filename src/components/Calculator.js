@@ -1,6 +1,21 @@
+/* eslint-disable */
 import React, { Component } from 'react';
+import calculate from '../logic/calculate';
+import operate from '../logic/operate';
 
 export default class Calculator extends Component {
+  constructor(props){
+    super();
+    this.state = { ogj : {
+      total: null,
+      next: null,
+      operation: null,
+    },
+    result : ''
+    }
+
+  }
+
   render() {
     return (
       <div className="calContainer">

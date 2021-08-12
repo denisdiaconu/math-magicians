@@ -36,11 +36,17 @@ export default class Calculator extends Component {
     return newnext;
   }
 
-  render() {
+  format = () => {
     const { total, next, operation } = this.state;
+    const display = (total || '') + (operation || '') + (next || '');
+
+    return display || '0';
+  };
+
+  render() {
     return (
       <div className="calContainer">
-        <input className="calInput" placeholder="0" value={`${total} ${operation} ${this.display(next)}`} disabled="disabled" />
+        <input className="calInput" placeholder="0" value={`${this.format()}`} disabled="disabled" />
         <div className="calNumbers">
           <div className="conFirst">
             <button className="colorW" type="button" name="AC" onClick={(e) => { this.getInf(this.state, e.target.name); }}>AC</button>

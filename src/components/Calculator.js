@@ -40,7 +40,7 @@ export default class Calculator extends Component {
     const { total, next, operation } = this.state;
     return (
       <div className="calContainer">
-        <input className="calInput" value={`${total} ${operation}${this.display(next)}`} disabled="disabled" />
+        <input className="calInput" placeholder="0" value={`${total} ${operation} ${this.display(next)}`} disabled="disabled" />
         <div className="calNumbers">
           <div className="conFirst">
             <button className="colorW" type="button" name="AC" onClick={(e) => { this.getInf(this.state, e.target.name); }}>AC</button>

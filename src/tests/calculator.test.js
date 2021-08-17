@@ -50,4 +50,36 @@ describe('Testing calculator functions', () => {
         const resultDiv = calculate(operationsDiv.entire, operationsDiv.option);
         expect(resultDiv.total).toBe('2')
     })
+    test('Test if the resut of 5 % 2 is 1', () => {
+        const operationsOp = {
+            entire: {
+                total: '5',
+                operation: '%',
+                next: '2'
+            },
+            option: '='
+        }
+        const resultOp = calculate(operationsOp.entire, operationsOp.option);
+        expect(resultOp.total).toBe('1')
+    })
+    test('Testing AC function', () => {
+        const entireAc = {
+            total: '5',
+            operation: '%',
+            next: '2'
+        }
+        const button = 'AC'
+        const resultAc = calculate(entireAc, button);
+        expect(resultAc.total).toBe('')
+    })
+    test('Testing . function', () => {
+        const entireDot = {
+            total: '5',
+            operation: '+',
+            next: '5'
+        }
+        const buttonDot = '.'
+        const resultDot = calculate(entireDot, buttonDot);
+        expect(resultDot.next).toBe('5.')
+    })
 })

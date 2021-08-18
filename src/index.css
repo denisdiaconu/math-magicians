@@ -21,9 +21,10 @@ body {
 }
 
 .calContainer {
-  width: 50%;
+  width: 100%;
   height: auto;
   margin: auto;
+  margin-right: 20px;
 }
 
 .calNumbers {
@@ -72,4 +73,18 @@ body {
 .calNumbers > div > div {
   display: flex;
   width: 100%;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.contH {
+  width: 70%;
+}
+
+.contH > h2 {
+  margin-left: 20px;
 }

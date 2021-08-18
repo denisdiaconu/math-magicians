@@ -1,0 +1,10 @@
+.specialD {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  margin-top: 300px;
+}
+
+.specialD > p {
+  font-weight: bold;
+}

@@ -17,7 +17,7 @@
 
 
 
-## Getting Started
+##  Getting Started
 
 To get a local copy up and running follow these simple example steps on the command line.
 > Clone the project from it's github repo.
